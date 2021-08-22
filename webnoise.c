@@ -12,17 +12,24 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
+#ifdef WINDOWS
+#include <windows.h>
+#endif
+
+#ifndef WINDOWS
 #include <libgen.h>
+#include <unistd.h>
+#endif
 #include <math.h>
-#include <oping.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include <unistd.h>
+#include "wping.h"
+#include "config.h"
 
 /* cross system line ending compat */
-#ifdef __WIN32__
+#ifdef WINDOWS
 const char *newline = "\r\n";
 #else
 const char *newline = "\n";
@@ -115,7 +122,11 @@ cachefile(FILE *file)
 void
 cache(char *in) 
 {
+#ifdef WINDOWS
+    if (fopen(in, "r") != NULL && nflag == 0) { /* i don't love having to do it this way but i'm not familiar enough with c on w*ndows to know of a better solution */
+#else
     if (access(in, F_OK) == 0 && nflag == 0) {
+#endif
         FILE *fp;
         fp = fopen(in, "r");
         cachefile(fp);
@@ -136,13 +147,16 @@ void go()
             srand(seed);
             r = rand() % (cachenum - 1);
         }
-        pingobj_t *pp = ping_construct();
-        ping_host_add(pp, addrcache[r]);
-        ping_send(pp);
-        ping_destroy(pp);
+        wping(addrcache[r]);
+#ifdef WINDOWS
+        if (mflag > 0) {
+            Sleep(60000);
+        } else Sleep(5);
+#else
         if (mflag > 0) {
             sleep(60);
         } else nanosleep(intrtp, NULL);
+#endif
     }
 }
 
@@ -150,7 +164,11 @@ int
 main(int argv,
      char **argc)
 {
+#ifdef WINDOWS
+    progname = argc[0];
+#else
     progname = basename(argc[0]);
+#endif
     realargv = argv - 1;
     intrtp = &intrt;
     intrtp->tv_nsec = 50000000; 

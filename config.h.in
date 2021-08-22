@@ -1,0 +1,163 @@
+/* Copyright 2021 chickazee4
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+
+/* Define to 1 if you have the declaration of `strerror_r', and to 0 if you
+   don't. */
+#cmakedefine HAVE_DECL_STRERROR_R 1
+
+/* Define to 1 if you have the <dlfcn.h> header file. */
+#cmakedefine HAVE_DLFCN_H 1
+
+/* Define to 1 if you have the <fcntl.h> header file. */
+#cmakedefine HAVE_FCNTL_H 1
+
+/* Define to 1 if you have the `gettimeofday' function. */
+#cmakedefine HAVE_GETTIMEOFDAY 1
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#cmakedefine HAVE_INTTYPES_H 1
+
+/* Define to 1 if you have the <langinfo.h> header file. */
+#cmakedefine HAVE_LANGINFO_H 1
+
+/* Define to 1 if you have the <locale.h> header file. */
+#cmakedefine HAVE_LOCALE_H 1
+
+/* Define to 1 if your system has a GNU libc compatible `malloc' function, and
+   to 0 otherwise. */
+#cmakedefine HAVE_MALLOC 1
+
+/* Define to 1 if you have the <math.h> header file. */
+#cmakedefine HAVE_MATH_H 1
+
+/* Define to 1 if you have the <memory.h> header file. */
+#cmakedefine HAVE_MEMORY_H 1
+
+/* Define to 1 if you have the `memset' function. */
+#cmakedefine HAVE_MEMSET 1
+
+/* Define to 1 if you have the `modf' function. */
+#cmakedefine HAVE_MODF 1
+
+/* disable ncurses */
+#undef HAVE_NCURSESW_CURSES_H
+#undef HAVE_NCURSESW_H
+#undef HAVE_NCURSES_CURSES_H
+#undef HAVE_NCURSES_H
+
+/* Define to 1 if you have the <netdb.h> header file. */
+#cmakedefine HAVE_NETDB_H 1
+
+/* Define to 1 if you have the <netinet/icmp6.h> header file. */
+#cmakedefine HAVE_NETINET_ICMP6_H 1
+
+/* Define to 1 if you have the <netinet/in.h> header file. */
+#cmakedefine HAVE_NETINET_IN_H 1
+
+/* Define to 1 if you have the <netinet/in_systm.h> header file. */
+#cmakedefine HAVE_NETINET_IN_SYSTM_H 1
+
+/* Define to 1 if you have the <netinet/ip6.h> header file. */
+#cmakedefine HAVE_NETINET_IP6_H 1
+
+/* Define to 1 if you have the <netinet/ip.h> header file. */
+#cmakedefine HAVE_NETINET_IP_H 1
+
+/* Define to 1 if you have the <netinet/ip_icmp.h> header file. */
+#cmakedefine HAVE_NETINET_IP_ICMP_H 1
+
+/* Define to 1 if you have the <netinet/ip_var.h> header file. */
+#cmakedefine HAVE_NETINET_IP_VAR_H 1
+
+/* Define to 1 if you have the `select' function. */
+#cmakedefine HAVE_SELECT 1
+
+/* Define to 1 if you have the <signal.h> header file. */
+#cmakedefine HAVE_SIGNAL_H 1
+
+/* Define to 1 if you have the `socket' function. */
+#cmakedefine HAVE_SOCKET 
+
+/* Define to 1 if you have the `sqrt' function. */
+#cmakedefine HAVE_SQRT 
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#cmakedefine HAVE_STDINT_H
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#cmakedefine HAVE_STDLIB_H
+
+/* Define to 1 if you have the `strcasecmp' function. */
+#cmakedefine HAVE_STRCASECMP
+
+/* Define to 1 if you have the `strdup' function. */
+#cmakedefine HAVE_STRDUP
+
+/* Define to 1 if you have the `strerror' function. */
+#cmakedefine HAVE_STRERROR
+
+/* Define to 1 if you have the `strerror_r' function. */
+#cmakedefine HAVE_STRERROR_R
+
+/* Define to 1 if you have the <strings.h> header file. */
+#cmakedefine HAVE_STRINGS_H
+
+/* Define to 1 if you have the <string.h> header file. */
+#cmakedefine HAVE_STRING_H
+
+/* Define to 1 if you have the `strncasecmp' function. */
+#cmakedefine HAVE_STRNCASECMP
+
+/* Define to 1 if you have the `strtoul' function. */
+#cmakedefine HAVE_STRTOUL
+
+/* Define to 1 if you have the <sys/socket.h> header file. */
+#cmakedefine HAVE_SYS_SOCKET_H
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#cmakedefine HAVE_SYS_STAT_H
+
+/* Define to 1 if you have the <sys/time.h> header file. */
+#cmakedefine HAVE_SYS_TIME_H
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#cmakedefine HAVE_SYS_TYPES_H
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#cmakedefine HAVE_UNISTD_H
+
+/* Define to 1 if you have the ANSI C header files. */
+#define STDC_HEADERS 1
+
+/* Define to 1 if you can safely include both <sys/time.h> and <time.h>. */
+#cmakedefine TIME_WITH_SYS_TIME
+
+/* Define to 1 if you want to get debugging output. */
+#cmakedefine WITH_DEBUG
+
+/* Define for Solaris 2.5.1 so the uint32_t typedef from <sys/synch.h>,
+   <pthread.h>, or <semaphore.h> is not used. If the typedef were allowed, the
+   #define below would cause a syntax error. */
+#cmakedefine _UINT32_T
+
+/* Define for Solaris 2.5.1 so the uint8_t typedef from <sys/synch.h>,
+   <pthread.h>, or <semaphore.h> is not used. If the typedef were allowed, the
+   #define below would cause a syntax error. */
+#cmakedefine _UINT8_T
+
+/* Define to `int' if <sys/types.h> doesn't define. */
+#cmakedefine HAVE_GID_T
+
+#cmakedefine WINDOWS
